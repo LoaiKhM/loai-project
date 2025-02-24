@@ -1,0 +1,184 @@
+html, body {
+    height: 100%;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #c91179;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+.calc{
+    width: 450px;
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+    box-shadow: 0px 0px 21px black;
+}
+.overlay{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+.login_form{
+    display: flex;
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    justify-content: center;
+    border-radius: 5px;
+    padding-left: 15px;
+    flex-direction: column;
+    padding-right: 15px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    position: fixed;
+    align-items: center;
+    width: 95%;
+}
+.profile{
+    width:32px;
+    height:32px;
+    cursor: pointer;
+}
+.profile_open{
+    background-color: white;
+    border-radius: 4px;
+    padding: 4px;
+    color: black;
+    width: 100px;
+    height: 100px;
+    font-size: 5px;
+    color: white;
+    display: none;
+    font-family: sans-serif;
+}
+.loai{
+    font-family: 'Playwrite CU', cursive;
+    color: white;
+}
+.result {
+    outline: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.result input {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 10px;
+    color: black;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-size: 1.5em;
+}
+.symb {
+    display: grid;
+    grid-template-areas:
+        "number1 number2 number3 mult mult"
+        "number4 number5 number6 divide divide"
+        "number7 number8 number9 number0 number0"
+        "sum minus equal ac backspace";
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+button {
+    padding: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+}
+button:active {
+    background-color: #ddd;
+}
+
+#n0 {
+    grid-area: number0;
+}
+#n1 {
+    grid-area: number1;
+}
+#n2 {
+    grid-area: number2;
+}
+#n3 {
+    grid-area: number3;
+}
+#n4 {
+    grid-area: number4;
+}
+#n5 {
+    grid-area: number5;
+}
+#n6 {
+    grid-area: number6;
+}
+#n7 {
+    grid-area: number7;
+}
+#n8 {
+    grid-area: number8;
+}
+#n9 {
+    grid-area: number9;
+}
+#mult {
+    grid-area: mult;
+}
+#divide {
+    grid-area: divide;
+}
+#sum {
+    grid-area: sum;
+}
+#minus {
+    grid-area: minus;
+}
+#equal {
+    grid-area: equal;
+}
+#ac {
+    grid-area: ac;
+}
+#backspace {
+    grid-area: backspace;
+}
+.input_name,
+.input_age,
+select{
+    outline: 0;
+    height: 40px;
+    padding-left: 8px;
+    margin-bottom: 10px;
+}
+.sumbit{
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+    width: 100px;
+    font-size: 15px;
+    align-self: flex-end;
+    position: relative;
+    top: 25px;
+}
